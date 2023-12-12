@@ -1,17 +1,14 @@
 # WP Dependency Installer
-* Contributors: [Andy Fragen](https://github.com/afragen), [Matt Gibbs](https://github.com/mgibbs189), [Raruto](https://github.com/Raruto), [contributors](https://github.com/afragen/wp-dependency-installer/graphs/contributors)
-* Tags: plugin, dependency, install
+
 * Requires at least: 5.1
 * Requires PHP: 5.6
 * Stable tag: master
-* Donate link: <https://thefragens.com/wp-dependency-installer-donate>
 * License: MIT
 
 This is a drop in class for developers to optionally or automatically install plugin dependencies for their own plugins or themes. It can install a plugin from wp.org, GitHub, Bitbucket, GitLab, Gitea, or a direct URL.
 
-[Comprehensive information regarding WP Dependency Installer is available on the wiki.](https://github.com/afragen/wp-dependency-installer/wiki)
+[Comprehensive information regarding WP Dependency Installer is available on the wiki.](https://github.com/TimelyResponse/PHP-WP-Dependency/wiki)
 
-See also: [example plugin](https://github.com/afragen/wp-dependency-installer-examples).
 
 ## Description
 
@@ -25,7 +22,7 @@ You can use **composer** to install this package within your WordPress plugin / 
 composer require afragen/wp-dependency-installer
 ```
 
-2. Then create a sample [**`wp-dependencies.json`**](https://github.com/afragen/wp-dependency-installer/wiki/Configuration#json-config-file-format) file
+2. Then create a sample [**`wp-dependencies.json`**](https://github.com/TimelyResponse/PHP-WP-Dependency/wiki/Configuration#json-config-file-format) file
 
 ```js
 [
@@ -68,7 +65,7 @@ add_action( 'plugins_loaded', static function() {
 
 `WP_Dependency_Installer` should be loaded via an action hook like `plugins_loaded` or `init` to function properly as it requires `wp-includes/pluggable.php` to be loaded for `wp_create_nonce()`.
 
-4. (optional) Take a look at some of built in [Hooks](https://github.com/afragen/wp-dependency-installer/wiki/Actions-and-Hooks) and [Functions](https://github.com/afragen/wp-dependency-installer/wiki/Helper-Functions) to further customize your plugin look and behaviour:
+4. (optional) Take a look at some of built in [Hooks](https://github.com/TimelyResponse/PHP-WP-Dependency/wiki/Actions-and-Hooks) and [Functions](https://github.com/TimelyResponse/PHP-WP-Dependency/wiki/Helper-Functions) to further customize your plugin look and behaviour:
 
 That's it, happy blogging!
 
